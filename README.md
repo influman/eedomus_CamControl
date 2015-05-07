@@ -39,6 +39,7 @@ Pour s'affranchir de ce script, peut-être que l'équipe eedomus pourrait nous i
 le transfert vers le ftp respectif des caméras, via un état canal complémentaire utilisable en macro et règles.
 
 edit 1 : Ajout envoi de mail
+
 Pré-requis :
 Dans le fichier php, il faut paramétrer le mail destinataire (gmail).
 Côté serveur php, il faut paramétrer le serveur smtp. Sur mon Nas Synology, j'ai testé avec succès en associant 
@@ -60,7 +61,8 @@ Permet de restituer dans un widget "contenue HTML" d'eedomus les images issues d
 Le Script permet de restituer de 1 à 4 dernières captures dans le même widget.
 En précisant dans l'URL la variable numimg=4 par exemple.
 
-Contenu HTML eedomus : remplacer les ! par deq <
+Contenu HTML eedomus : remplacer les "!" par des "<"
+
 !html>!head></head>!body>!P style="text-align:center">!img width=285 height=217 
 src="http://xx.xx.xx.xx/imgftp.php?numimg=4"!/img>!/p>!/body>!/html>
 

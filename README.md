@@ -60,9 +60,9 @@ Permet de restituer dans un widget "contenue HTML" d'eedomus les images issues d
 Le Script permet de restituer de 1 à 4 dernières captures dans le même widget.
 En précisant dans l'URL la variable numimg=4 par exemple.
 
-Contenu HTML eedomus : 
-<html><head></head><body><P style="text-align:center"><img width=285 height=217 
-src="http://xx.xx.xx.xx/imgftp.php?numimg=4"</img></p></body></html>
+Contenu HTML eedomus : remplacer les ! par deq <
+!html>!head></head>!body>!P style="text-align:center">!img width=285 height=217 
+src="http://xx.xx.xx.xx/imgftp.php?numimg=4"!/img>!/p>!/body>!/html>
 
 Dans le script,
 Vous pouvez préciser plusieurs ftp (si applicable) et leurs paramètres d'accès associés.

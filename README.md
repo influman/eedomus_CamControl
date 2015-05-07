@@ -1,6 +1,8 @@
 # eedomus_CamControl
 Scripts de manipulation des caméras pour eedomus
 
+NB : Script à installer sur serveur web/php autre que l'eedomus elle-même
+
 CAMFTP
 ======
 

@@ -5,15 +5,22 @@ function startsWith($haystack, $needle) {
      return (substr($haystack, 0, $length) === $needle);
 }
 //*******************************************************
+function endsWith($haystack, $needle) {
+     $length = strlen($needle);
+     $length2 = strlen($haystack);
+     return (substr($haystack, $length2 - $length, $length) === $needle);
+}
+//*******************************************************
 //*
 $ftp = array(
-	1 => array("server" => "xx.xxx.xx.xxx", "user" => "xxxxx", "pwd" => "xxxx", "path" => "xxxxx"),
+	1 => array("server" => "xx.xxx.xx.xxx", "user" => "xxx", "pwd" => "xxxx", "path" => "xxxx"),
 	2 => array("server" => "", "user" => "", "pwd" => "", "path" => ""));
 //*
 $ftpmax = 1; // mettre le nombre total de serveurs ftp du tableau $ftp
 $numftp = 1;
 $prefix = "";
 $numimg = 1;
+$extension = ".jpg";
 $histoimg= array();
 if (isset($_GET['numftp'])) {
 	if ($_GET['numftp'] <= $ftpmax && $_GET['numftp'] > 0) {
@@ -50,8 +57,8 @@ foreach ($listfile as $key => $val) {
 				break;
 			}
 		}
-    } else {
-    	$idxhisto++;
+    } else if (endsWith($val, $extension) == true) {
+		$idxhisto++;
 		$histoimg[$idxhisto] = $key;
 		if ($idxhisto == $numimg) {
 			break;
